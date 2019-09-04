@@ -23,25 +23,25 @@ class Header extends React.Component {
                 <div id="header">
                     <div className="container-fluid">
                         <div className="row">
-                            <div className="col-xs-7 col-md-4">
-                                <NavLink to="/">
-                                    <img id="logo" src={Logo} alt={variables('name')} title={variables('name')} className="img-responsive" />
-                                </NavLink>
-                            </div>
-                            <div className="hidden-sm hidden-xs col-md-8 text-right">
+                            <div className="hidden-sm hidden-xs col-md-9">
                                 <IsLoggedIn status={this.props.isLoggedIn} />
                             </div>
-                            <div className="hidden-md hidden-lg col-xs-5 text-right">
+                            <div className="hidden-md hidden-lg col-xs-9">
                                 <div className="hamburger hamburger--collapse" onClick={()=>{this.menu()}}>
                                     <div className="hamburger-box">
                                         <div className="hamburger-inner"></div>
                                     </div>
                                 </div>
                             </div>
+                            <div className="text-center"> {/* col-md-3 was added to class */}
+                                <NavLink to="/">
+                                    <img id="logo" className="ml-md-5" src={Logo} alt={variables('name')} title={variables('name')} />
+                                </NavLink>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div id="menu" className="hide">
+                 <div id="menu" className="hide">
                     <div className="container-fluid">
                         <div className="row">
                             <div className="col-xs-12">
@@ -49,7 +49,7 @@ class Header extends React.Component {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> 
             </>
         )
     }
