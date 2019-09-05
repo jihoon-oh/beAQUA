@@ -15,7 +15,7 @@ import icon11                       from '../../../assets/img/icons/034.png'
 import icon12                       from '../../../assets/img/icons/035.png'
 import icon13                       from '../../../assets/img/icons/036.png'
 
-import aquaStripe                   from '../../../assets/img/AQUA_STRIPE_BG-02.png'
+import aquaLogoStripe                   from '../../../assets/img/aqua_logo_stripe.png'
 
 class Main extends React.Component {
     static propTypes = {
@@ -33,14 +33,18 @@ class Main extends React.Component {
     render() { 
         return (
             <>
-              <div id="home" style={{backgroundImage: 'URL("'+aquaStripe+'")', backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center'}}>
+              <div id="home" style={{backgroundColor: 'white', backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center'}}>
+              {/* <div id="home" style={{backgroundImage: 'URL("'+aquaStripe+'")', backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center'}}> */}
                 <div className="container-fluid">
-                  <div className="row">
-                    <div className="col-xs-12 col-md-6">
-                      
+                  <div id="wrapper" className="col-sm-8 float-none">
+                    <div className="row mb15_">
+                        <img src={aquaLogoStripe} alt="" className="img-responsive mx-auto"/>
                     </div>
-                    <div className="col-xs-12 col-md-6">
-                      
+                    <div className="row text-right float-right mb15_">
+                        <span className="title1 blue_">Helping the world transition to a digital future on blockchain.</span>
+                    </div>
+                    <div className="row text-right float-right mb15_">
+                        <button className="btn blueBG_ title3">LEARN MORE</button>
                     </div>
                   </div>
                 </div>

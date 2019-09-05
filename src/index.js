@@ -14,6 +14,7 @@ import Contact                        from './routes/contact/view'
 import FZF                            from './routes/404/view'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+// import './assets/css/bootstrap.min.css'; // 4.3.1
 import '@fortawesome/fontawesome-free/css/fontawesome.min.css'
 import '@fortawesome/fontawesome-free/css/all.min.css'
 import './assets/css/main.css';

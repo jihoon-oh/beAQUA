@@ -6,7 +6,7 @@ import {getCookie, eraseCookie}     from '../function/cookies'
 import {variables}                  from '../function/variables'
 
 // import Logo from '../../assets/img/logotext_.png'
-import Logo from '../assets/img/logo.png'
+import Logo from '../assets/img/aqua_logo_solid.png'
 
 class Header extends React.Component {
     constructor(props){
@@ -45,7 +45,7 @@ class Header extends React.Component {
                         </div>
                     </div>
                 </div>
-                 <div id="menu" className="hide">
+                <div id="menu" className="hide">
                     <div className="container-fluid">
                         <div className="row">
                             <div className="col-xs-12">
@@ -67,7 +67,7 @@ class Header extends React.Component {
                             </div>
                         </div>
                     </div>
-                </div> 
+                </div>
             </>
         )
     }

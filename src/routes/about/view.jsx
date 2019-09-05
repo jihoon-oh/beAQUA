@@ -7,7 +7,7 @@ import {variables}                  from '../../function/variables'
 import Footer                       from '../../_components/footer';
 
 import Main                         from './components/main';
-import Logo                         from '../../assets/img/logo.png';
+import Logo                         from '../../assets/img/aqua_logo_solid.png';
 import LogoW                        from '../../assets/img/logoWbg.png';
 
 
