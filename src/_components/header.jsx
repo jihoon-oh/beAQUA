@@ -24,7 +24,11 @@ class Header extends React.Component {
                     <div className="container-fluid">
                         <div className="row">
                             <div className="hidden-sm hidden-xs col-md-9">
-                                <IsLoggedIn status={this.props.isLoggedIn} />
+                                <NavLink to="/about">About</NavLink>
+                                <NavLink to="/work">Work</NavLink>
+                                <NavLink to="/team">Team</NavLink>
+                                <NavLink to="/blog">Blog</NavLink>
+                                <NavLink to="/contact">Contact</NavLink>
                             </div>
                             <div className="hidden-md hidden-lg col-xs-9">
                                 <div className="hamburger hamburger--collapse" onClick={()=>{this.menu()}}>
@@ -45,7 +49,21 @@ class Header extends React.Component {
                     <div className="container-fluid">
                         <div className="row">
                             <div className="col-xs-12">
-                                <IsLoggedInMobile status={this.props.isLoggedIn} /> 
+                                <div>
+                                    <NavLink to="/about">About</NavLink>
+                                </div>
+                                <div>
+                                    <NavLink to="/work">Work</NavLink>
+                                </div>
+                                <div>
+                                    <NavLink to="/team">Team</NavLink>
+                                </div>
+                                <div>
+                                    <NavLink to="/blog">Blog</NavLink>
+                                </div>
+                                <div>
+                                    <NavLink to="/contact">Contact</NavLink>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -85,7 +103,6 @@ class IsLoggedIn extends React.Component {
                 <>
                     <NavLink to="/dashboard#Overview">Dashbaord</NavLink>
                     <NavLink to="/pricing">Pricing</NavLink>
-                    {/* <NavLink to="/integrations">Integrations</NavLink> */}
                     <NavLink to="/docs">Docs</NavLink>
                     <a onClick={()=>{eraseCookie('token');eraseCookie('access_token')}} href={'http://127.0.0.1/AQUA-ECOSYSTEM/accounts.aqua/logout/aquapay?token='+getCookie('token')}>Logout</a>
                 </>
@@ -123,9 +140,6 @@ class IsLoggedInMobile extends React.Component {
                     <div>
                         <NavLink to="/pricing">Pricing</NavLink>
                     </div>
-                    {/* <div>
-                        <NavLink to="/integrations">Integrations</NavLink>
-                    </div> */}
                     <div>
                         <NavLink to="/docs">Docs</NavLink>
                     </div>

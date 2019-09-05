@@ -1,23 +1,23 @@
-import React                            from 'react';
-import ReactDOM                         from 'react-dom';
-import {Route, BrowserRouter, Switch}   from 'react-router-dom';
-import {ToastContainer}                 from 'react-toastify';
+import React                          from 'react';
+import ReactDOM                       from 'react-dom';
+import {Route, BrowserRouter, Switch} from 'react-router-dom';
+import {ToastContainer}               from 'react-toastify';
 
-import ScrollToTop                      from './_components/scroll'
-import Home                             from './routes/home/view'
-import Docs                             from './routes/docs/view'
-import Pricing                          from './routes/pricing/view'
-import Payments                         from './routes/payments/view'
-import Dashboard                        from './routes/dashboard/view'
-import Preview                          from './routes/dashboard/preview/view'
+import ScrollToTop                    from './_components/scroll'
+import Home                           from './routes/home/view'
+import About                          from './routes/about/view'
+import Work                           from './routes/work/view'
+import Team                           from './routes/team/view'
+import Blog                           from './routes/blog/view'
+import Contact                        from './routes/contact/view'
 
-import FZF                              from './routes/404/view'
+import FZF                            from './routes/404/view'
 
-import  'bootstrap/dist/css/bootstrap.min.css';
-import  '@fortawesome/fontawesome-free/css/fontawesome.min.css'
-import  '@fortawesome/fontawesome-free/css/all.min.css'
-import  './assets/css/main.css';
-import  './assets/css/hamburger.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '@fortawesome/fontawesome-free/css/fontawesome.min.css'
+import '@fortawesome/fontawesome-free/css/all.min.css'
+import './assets/css/main.css';
+import './assets/css/hamburger.min.css';
 
 
 class App extends React.Component{
@@ -26,14 +26,13 @@ class App extends React.Component{
             <BrowserRouter>
                 <ScrollToTop>
                     <Switch>
-                        <Route path="/"                                 component={Home} exact />
-                        <Route path="/docs"                             component={Docs} exact />
-                        <Route path="/pricing"                          component={Pricing} exact />
-                        <Route path="/dashboard"                        component={Dashboard} exact />
-                        <Route path="/dashboard/preview/:id"            component={Preview} exact />
+                        <Route path="/"        component={Home} exact />
+                        <Route path="/about"   component={About} exact />
+                        <Route path="/work"    component={Work} exact />
+                        <Route path="/team"    component={Team} exact />
+                        <Route path="/blog"    component={Blog} exact />
+                        <Route path="/contact" component={Contact} exact />
 
-
-                        <Route path="/:id"                              component={Payments} exact />
                         <Route component={FZF} />
                     </Switch>
                 </ScrollToTop>
