@@ -25,7 +25,9 @@ class Footer extends React.Component {
                             <span>Today is the day to build the business of your dreams. Share your mission with the world — and blow your customers away.</span>
                         </div>
                         <div className="mt30_">
-                            <button className="btn title3 whiteBG_">START NOW</button>
+                            <NavLink to="/contact">
+                                <button className="btn title3 whiteBG_">START NOW</button>    
+                            </NavLink>
                         </div>
                     </div>
                     <div id="footer2" className="container-fluid whiteBG_ text-center">

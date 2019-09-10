@@ -23,21 +23,21 @@ class Header extends React.Component {
                 <div id="header">
                     <div className="container-fluid">
                         <div className="row">
-                            <div className="hidden-sm hidden-xs col-md-9">
-                                <NavLink to="/about">About</NavLink>
-                                <NavLink to="/work">Work</NavLink>
-                                <NavLink to="/team">Team</NavLink>
-                                <NavLink to="/blog">Blog</NavLink>
-                                <NavLink to="/contact">Contact</NavLink>
+                            <div className="hidden-xs col-sm-9">
+                                <NavLink to="/about">ABOUT</NavLink>
+                                <NavLink to="/work">WORK</NavLink>
+                                <NavLink to="/team">TEAM</NavLink>
+                                <NavLink to="/blog">BLOG</NavLink>
+                                <NavLink to="/contact">CONTACT</NavLink>
                             </div>
-                            <div className="hidden-md hidden-lg col-xs-9">
+                            <div className="visible-xs-block col-xs-9">
                                 <div className="hamburger hamburger--collapse" onClick={()=>{this.menu()}}>
                                     <div className="hamburger-box">
                                         <div className="hamburger-inner"></div>
                                     </div>
                                 </div>
                             </div>
-                            <div className="text-center"> {/* col-md-3 was added to class */}
+                            <div className="col-xs-3 col-sm-3 text-right">
                                 <NavLink to="/">
                                     <img id="logo" className="ml-md-5" src={Logo} alt={variables('name')} title={variables('name')} />
                                 </NavLink>
@@ -50,19 +50,19 @@ class Header extends React.Component {
                         <div className="row">
                             <div className="col-xs-12">
                                 <div>
-                                    <NavLink to="/about">About</NavLink>
+                                    <NavLink to="/about">ABOUT</NavLink>
                                 </div>
                                 <div>
-                                    <NavLink to="/work">Work</NavLink>
+                                    <NavLink to="/work">WORK</NavLink>
                                 </div>
                                 <div>
-                                    <NavLink to="/team">Team</NavLink>
+                                    <NavLink to="/team">TEAM</NavLink>
                                 </div>
                                 <div>
-                                    <NavLink to="/blog">Blog</NavLink>
+                                    <NavLink to="/blog">BLOG</NavLink>
                                 </div>
                                 <div>
-                                    <NavLink to="/contact">Contact</NavLink>
+                                    <NavLink to="/contact">CONTACT</NavLink>
                                 </div>
                             </div>
                         </div>

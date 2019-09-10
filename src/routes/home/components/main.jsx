@@ -1,4 +1,5 @@
-import React                        from 'react';
+import React                        from 'react'
+import { NavLink }                  from 'react-router-dom'
 import {variables}                  from '../../../function/variables'
 
 import icon1                        from '../../../assets/img/icons/001.png'
@@ -38,13 +39,13 @@ class Main extends React.Component {
                 <div className="container-fluid">
                   <div id="wrapper" className="col-sm-8 float-none">
                     <div className="row mb15_">
-                        <img src={aquaLogoStripe} alt="" className="img-responsive mx-auto"/>
+                        <img src={aquaLogoStripe} alt="" className="img-responsive"/>
                     </div>
                     <div className="row text-right float-right mb15_">
                         <span className="title1 blue_">Helping the world transition to a digital future on blockchain.</span>
                     </div>
                     <div className="row text-right float-right mb15_">
-                        <button className="btn blueBG_ title3">LEARN MORE</button>
+                      <button className="btn blueBG_ title3">LEARN MORE</button>
                     </div>
                   </div>
                 </div>
@@ -68,13 +69,17 @@ class Main extends React.Component {
                       <div className="small-header mb15_">ABOUT</div>
                       <div className="big-header mb15_">Who We Are</div>
                       <div className="description mb15_ mr15_">Nulla vel sodales tellus, quis condimentum enim. Nunc porttitor venenatis feugiat. Etiam quis faucibus erat, non accumsan leo. Aliquam erat volutpat. Vestibulum ac faucibus eros. Cras ullamcorper gravida tellus ut consequat.</div>
-                      <button className="btn blueBG_ title3">LEARN MORE</button>
+                      <NavLink to="/about">
+                        <button className="btn blueBG_ title3">LEARN MORE</button>
+                      </NavLink>
                     </div>
                     <div className="col-xs-12 col-sm-6 mb30_">
                       <div className="small-header mb15_">TEAM</div>
                       <div className="big-header mb15_">What We Do</div>
                       <div className="description mb15_ ml15_">Nulla vel sodales tellus, quis condimentum enim. Nunc porttitor venenatis feugiat. Etiam quis faucibus erat, non accumsan leo. Aliquam erat volutpat. Vestibulum ac faucibus eros. Cras ullamcorper gravida tellus ut consequat.</div>
-                      <button className="btn blueBG_ title3">LEARN MORE</button>
+                      <NavLink to="/team">
+                        <button className="btn blueBG_ title3">LEARN MORE</button>
+                      </NavLink>
                     </div>
                   </div>
                 </div>

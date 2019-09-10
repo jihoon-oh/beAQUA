@@ -1,5 +1,7 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css?family=Heebo:300,400,700|Roboto+Mono:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700|Red+Hat+Display:400,500,700|Red+Hat+Text:400,500,700&display=swap');
+/*TODO: Only import the used font boldness. Currently importing a lot of them since I don't know which ones are being used*/
+
 
 html {
     overflow-x: hidden;
@@ -14,7 +16,7 @@ body {
 	min-width: 100%;
 	position: relative;
     -webkit-overflow-scrolling: touch;
-    font-family: 'Heebo', sans-serif;
+    font-family: Montserrat, sans-serif;
     font-weight: 300;
 }
 
@@ -177,20 +179,27 @@ a {
     margin: 10px auto 15px auto;
     font-family: Montserrat, sans-serif;
     font-size: 30px;
-    line-height: 30px;
+    line-height: 50px;
     font-weight: 500;
 }
 
+
+
 #header {
-    padding: 20px 0;
+    padding: 15px 10px;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     background-color: #FFFFFF;
-    color: #005AC6;
     z-index: 1000;
     font-size: 24px;
+}
+
+@media (min-width: 768px) {
+    #header {
+        padding: 20px 50px;
+    }
 }
 
 #header #logo {
@@ -198,12 +207,15 @@ a {
 }
 
 #header .hidden-xs > a {
-    margin-left: 25px;
-    color: #005AC6;
+    font-family: 'Red Hat Display', sans-serif;
+    color: #005ac6;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-right: 30px;
     display: inline-block;
     position: relative;
-    font-size: 16px;
-    font-weight: 400;
 }
 
 #header .hidden-xs > a:after {    
@@ -243,6 +255,7 @@ a {
 }
 
 footer {
+    margin-top: -1px;
     width: 100%;
     color: #FFF;
 }
@@ -260,7 +273,7 @@ footer #footer2 {
 }
 
 footer #footer2 img{
-    max-width: 3%;
+    width: 50px;
 }
 
 #menu {
@@ -292,14 +305,22 @@ footer #footer2 img{
     margin: 80px auto 0;
 }
 
-#home #wrapper img {
+#home #wrapper .row {
+    width: 90%;
+}
+
+#home #wrapper .row img {
     max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
 @media (min-width: 768px){
-    #home #wrapper .row {
-        width: 90%;
+    #home #wrapper .row img {
+        max-width: 480px;
+        margin-left: 0;
+        margin-right: 0;
     }
 }
 
@@ -496,7 +517,6 @@ footer #footer2 img{
 
 #home3 {
     padding: 60px 0;
-    height: 300px;
 }
 
 
