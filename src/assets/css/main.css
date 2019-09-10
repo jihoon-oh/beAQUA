@@ -24,6 +24,12 @@ a {
     text-decoration: none !important;
 }
 
+.btn {
+    padding: 16px 35px;
+    border-radius: 0;
+    transition: background-color 0.4s ease;
+}
+
 .blue_ {
     color: #005AC6 !important;
 }
@@ -42,6 +48,11 @@ a {
 
 .grey_ {
     color: #D7D7D7 !important;
+}
+
+.whiteBG_ {
+    background-color: #FFFFFF !important;
+    color: #005ac6 !important;
 }
 
 .redBG_ {
@@ -232,19 +243,24 @@ a {
 }
 
 footer {
-    background-color: #191919;
-    color: #FFFFFF;
-    padding: 45px 0;
+    width: 100%;
+    color: #FFF;
 }
 
-footer .fab {
-    margin-top: 60px;
-    padding: 0 15px;
-    font-size: 24px;
+footer #footer1 {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#005ac6), to(#FFF));
+    background-image: linear-gradient(180deg, #005ac6, #FFF);
+    padding-top: 120px;
+    padding-bottom: 120px;
 }
 
-footer a {
-    color: #FFFFFF !important;
+footer #footer2 {
+    margin-top: 90px;
+    margin-bottom: 90px;
+}
+
+footer #footer2 img{
+    max-width: 3%;
 }
 
 #menu {
@@ -285,12 +301,6 @@ footer a {
     #home #wrapper .row {
         width: 90%;
     }
-}
-
-#home #wrapper button {
-    padding: 16px 35px;
-    border-radius: 0;
-    transition: background-color 0.4s ease;
 }
 
 #home #wrapper button:hover {
