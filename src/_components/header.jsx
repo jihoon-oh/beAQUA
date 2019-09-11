@@ -25,10 +25,9 @@ class Header extends React.Component {
                         <div className="row">
                             <div className="hidden-xs col-sm-9">
                                 <NavLink to="/about">ABOUT</NavLink>
-                                <NavLink to="/work">WORK</NavLink>
                                 <NavLink to="/team">TEAM</NavLink>
-                                <NavLink to="/blog">BLOG</NavLink>
                                 <NavLink to="/contact">CONTACT</NavLink>
+                                <NavLink to="/login">LOGIN</NavLink>
                             </div>
                             <div className="visible-xs-block col-xs-9">
                                 <div className="hamburger hamburger--collapse" onClick={()=>{this.menu()}}>
@@ -53,16 +52,13 @@ class Header extends React.Component {
                                     <NavLink to="/about">ABOUT</NavLink>
                                 </div>
                                 <div>
-                                    <NavLink to="/work">WORK</NavLink>
-                                </div>
-                                <div>
                                     <NavLink to="/team">TEAM</NavLink>
                                 </div>
                                 <div>
-                                    <NavLink to="/blog">BLOG</NavLink>
+                                    <NavLink to="/contact">CONTACT</NavLink>
                                 </div>
                                 <div>
-                                    <NavLink to="/contact">CONTACT</NavLink>
+                                    <NavLink to="/login">LOGIN</NavLink>
                                 </div>
                             </div>
                         </div>

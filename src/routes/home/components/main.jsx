@@ -45,7 +45,9 @@ class Main extends React.Component {
                         <span className="title1 blue_">Helping the world transition to a digital future on blockchain.</span>
                     </div>
                     <div className="row text-right float-right mb15_">
-                      <button className="btn blueBG_ title3">LEARN MORE</button>
+                      <a href="#home3">
+                        <button className="btn blueBG_ title3">LEARN MORE</button>
+                      </a>
                     </div>
                   </div>
                 </div>

@@ -6,10 +6,9 @@ import {ToastContainer}               from 'react-toastify';
 import ScrollToTop                    from './_components/scroll'
 import Home                           from './routes/home/view'
 import About                          from './routes/about/view'
-import Work                           from './routes/work/view'
 import Team                           from './routes/team/view'
-import Blog                           from './routes/blog/view'
 import Contact                        from './routes/contact/view'
+import Login                          from './routes/login/view'
 
 import FZF                            from './routes/404/view'
 
@@ -29,10 +28,9 @@ class App extends React.Component{
                     <Switch>
                         <Route path="/"        component={Home} exact />
                         <Route path="/about"   component={About} exact />
-                        <Route path="/work"    component={Work} exact />
                         <Route path="/team"    component={Team} exact />
-                        <Route path="/blog"    component={Blog} exact />
                         <Route path="/contact" component={Contact} exact />
+                        <Route path="/login" component={Login} exact />
 
                         <Route component={FZF} />
                     </Switch>
