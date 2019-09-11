@@ -77,6 +77,11 @@ a {
     color: #FFFFFF !important;
 }
 
+.blacBG_ {
+    background-color: black !important;
+    color: #FFFFFF !important;
+}
+
 .float-none {
     float: none;
 }
