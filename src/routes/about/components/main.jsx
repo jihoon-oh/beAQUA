@@ -8,6 +8,13 @@ import {variables}                  from '../../../function/variables'
 import {getCookie}                  from '../../../function/cookies'
 import {timeRemaining}              from '../../../function/timeRemaining'
 
+import icon1                        from '../../../assets/img/icons/001.png'
+import icon2                        from '../../../assets/img/icons/006.png'
+import icon3                        from '../../../assets/img/icons/018.png'
+import icon4                        from '../../../assets/img/icons/021.png'
+import icon5                        from '../../../assets/img/icons/028.png'
+import icon6                        from '../../../assets/img/icons/033.png'
+
 
 class Main extends React.Component {
     static propTypes = {
@@ -49,7 +56,43 @@ class Main extends React.Component {
                         </div>
                     </div>
                 </div>
-
+                <div id="about3" className="mt60_ mb60_">
+                    <div className="container">
+                        <div className="col-xs-12 col-sm-3 mb60_">
+                            <span className="title1">Our Services</span>
+                        </div>
+                        <div className="col-xs-12 col-sm-3">
+                            <div className="col-xs-6 col-sm-12 icon-wrapper mb60_">
+                                <img src={icon1} alt=""/>
+                                <div className="title3">Support</div>
+                            </div>
+                            <div className="col-xs-6 col-sm-12 icon-wrapper mb60_">
+                                <img src={icon2} alt=""/>
+                                <div className="title3">Training</div>
+                            </div>
+                        </div>
+                        <div className="col-xs-12 col-sm-3">
+                            <div className="col-xs-6 col-sm-12 icon-wrapper mb60_">
+                                <img src={icon3} alt=""/>
+                                <div className="title3">Strategy</div>
+                            </div>
+                            <div className="col-xs-6 col-sm-12 icon-wrapper mb60_">
+                                <img src={icon4} alt=""/>
+                                <div className="title3">Consulting</div>
+                            </div>
+                        </div>
+                        <div className="col-xs-12 col-sm-3">
+                            <div className="col-xs-6 col-sm-12 icon-wrapper mb60_">
+                                <img src={icon5} alt=""/>
+                                <div className="title3">Management</div>
+                            </div>
+                            <div className="col-xs-6 col-sm-12 icon-wrapper mb60_">
+                                <img src={icon6} alt=""/>
+                                <div className="title3">Events</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </>  
         );
     }

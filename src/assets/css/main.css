@@ -697,6 +697,29 @@ input[type="checkbox"]{
     width: 80%;
 }
 
+/*
+UNCOMMENT THIS TO CENTER "OUR-SERVICES"
+
+#about3 .container {
+    display: flex;
+    align-items: center;
+}
+*/
+
+#about3 .container > div {
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    #about3 .container > div:first-child {
+        text-align: left;
+    }
+}
+
+#about3 .container .icon-wrapper img {
+    width: 50px;
+}
+
 #dashCreate, #dashTransactions, #dashOverview, #dashAnaltyics, #dashSetup, #dashSettings, #dashDevelopers, #dashPlans {
     min-height: 100vh;
     position: relative;
