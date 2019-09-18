@@ -698,7 +698,7 @@ input[type="checkbox"]{
 }
 
 /*
-UNCOMMENT THIS TO CENTER "OUR-SERVICES"
+UNCOMMENT THIS TO VERTICALLY CENTER "OUR-SERVICES"
 
 #about3 .container {
     display: flex;
@@ -706,17 +706,13 @@ UNCOMMENT THIS TO CENTER "OUR-SERVICES"
 }
 */
 
-#about3 .container > div {
+#about3 .container > div, 
+#team2 .container > div {
     text-align: center;
 }
 
-@media (min-width: 768px) {
-    #about3 .container > div:first-child {
-        text-align: left;
-    }
-}
-
-#about3 .container .icon-wrapper img {
+#about3 .container .icon-wrapper img,
+#team2 .container .icon-wrapper img {
     width: 50px;
 }
 
