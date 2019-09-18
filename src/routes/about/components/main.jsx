@@ -64,31 +64,31 @@ class Main extends React.Component {
                         <div className="col-xs-12 col-sm-3">
                             <div className="col-xs-6 col-sm-12 icon-wrapper mb60_">
                                 <img src={icon1} alt=""/>
-                                <div className="title3">Support</div>
+                                <div className="mt30_ title3">Support</div>
                             </div>
                             <div className="col-xs-6 col-sm-12 icon-wrapper mb60_">
                                 <img src={icon2} alt=""/>
-                                <div className="title3">Training</div>
+                                <div className="mt30_ title3">Training</div>
                             </div>
                         </div>
                         <div className="col-xs-12 col-sm-3">
                             <div className="col-xs-6 col-sm-12 icon-wrapper mb60_">
                                 <img src={icon3} alt=""/>
-                                <div className="title3">Strategy</div>
+                                <div className="mt30_ title3">Strategy</div>
                             </div>
                             <div className="col-xs-6 col-sm-12 icon-wrapper mb60_">
                                 <img src={icon4} alt=""/>
-                                <div className="title3">Consulting</div>
+                                <div className="mt30_ title3">Consulting</div>
                             </div>
                         </div>
                         <div className="col-xs-12 col-sm-3">
                             <div className="col-xs-6 col-sm-12 icon-wrapper mb60_">
                                 <img src={icon5} alt=""/>
-                                <div className="title3">Management</div>
+                                <div className="mt30_ title3">Management</div>
                             </div>
                             <div className="col-xs-6 col-sm-12 icon-wrapper mb60_">
                                 <img src={icon6} alt=""/>
-                                <div className="title3">Events</div>
+                                <div className="mt30_ title3">Events</div>
                             </div>
                         </div>
                     </div>

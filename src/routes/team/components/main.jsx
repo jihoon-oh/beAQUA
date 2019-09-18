@@ -1,13 +1,19 @@
 import React                        from 'react';
 import {NavLink}                    from 'react-router-dom';
-import { Redirect }                 from 'react-router'
-import { instanceOf }               from 'prop-types';
-import Toastify                     from 'toastify-js'
-import $                            from 'jquery'
+import QRCode                       from 'qrcode'
+import {toast}                      from 'react-toastify';
 
+import {post_}                      from '../../../function/fetch'
 import {variables}                  from '../../../function/variables'
+import {getCookie}                  from '../../../function/cookies'
+import {timeRemaining}              from '../../../function/timeRemaining'
 
-import V1OverviewIntroduction     from './v1/overview/introduction';
+import icon1                        from '../../../assets/img/icons/001.png'
+import icon2                        from '../../../assets/img/icons/006.png'
+import icon3                        from '../../../assets/img/icons/018.png'
+import icon4                        from '../../../assets/img/icons/021.png'
+import icon5                        from '../../../assets/img/icons/028.png'
+import icon6                        from '../../../assets/img/icons/033.png'
 
 
 class Main extends React.Component {
@@ -19,120 +25,50 @@ class Main extends React.Component {
       super(props);
 
       this.state = {
-          
       }
     }
 
     render() { 
         return (
             <>
-                <div id="docs">
+                <div id="team1" className="mb60_">
+                    <div className="container jumbotron">
+                        <div className="jumbotron-header">Team</div>
+                    </div>
+                </div>
+                <div id="team2" className="mt60_ mb60_">
                     <div className="container">
-                        <div className="row">
-                            <div className="col-xs-12 text-center">
-                                <div className="title1">Documentation</div>
+                        <div className="col-xs-12 col-sm-3 mb60_">
+                            <span className="title1">Our world-class team</span>
+                        </div>
+                        <div className="col-xs-12 col-sm-3">
+                            <div className="col-xs-6 col-sm-12 icon-wrapper mb60_">
+                                <img src={icon1} alt=""/>
+                                <div className="mt30_ title3">Michael Fassbender</div>
+                            </div>
+                            <div className="col-xs-6 col-sm-12 icon-wrapper mb60_">
+                                <img src={icon2} alt=""/>
+                                <div className="mt30_ title3">Jason Smith</div>
                             </div>
                         </div>
-                        <div className="row">
-                            <div className="col-xs-12 col-md-2">
-                                <div className="title3">Overview <span className="small fas fa-sort-down"></span></div>
-                                <div>    
-                                    <div className="mb5_">Introduction</div>
-                                    <div className="mb5_">Authentication</div>
-                                    <div className="mb5_">Errors</div>
-                                    <div className="mb5_">Rate Limits</div>
-                                </div>
+                        <div className="col-xs-12 col-sm-3">
+                            <div className="col-xs-6 col-sm-12 icon-wrapper mb60_">
+                                <img src={icon3} alt=""/>
+                                <div className="mt30_ title3">Amanda Peterson</div>
                             </div>
-                            <div className="col-xs-12 col-md-10">
-                                <V1OverviewIntroduction />
-                                <div className="mb15_">
-                                    <div className="title1">Request data</div>
-                                </div>
-                                <div className="mb15_">
-                                    <div className="title2">Example request</div>
-                                </div>
-                                <div className="mb15_">
-                                    <div className="code_">
-                                        <pre>
-                                            <code>
-                                                <div className="mb30_">
-                                                    <div className="title3 m0_">Resource URL</div> 
-                                                    <div className="docs_info">https://api.aquapay.com/v1/hello</div>
-                                                </div>
-                                                <div className="mb30_">
-                                                    <div className="title3 m0_">Method</div>
-                                                    <div className="docs_info">POST</div>
-                                                </div>
-                                            </code>
-                                        </pre>
-                                    </div>
-                                </div>
-                                <div className="table-responsive mb60_ mt60_">
-                                    <table className="table table-striped">
-                                        <thead>
-                                            <tr>
-                                                <td className="title3">Parameters</td>
-                                                <td className="title3">Required</td>
-                                                <td className="title3">Description</td>
-                                                <td className="title3">Default value</td>
-                                                <td className="title3">Example</td>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>public_key</td>
-                                                <td>Yes</td>
-                                                <td>Public API key.</td>
-                                                <td></td>
-                                                <td>OfC2uemaknXr8s2FiUqFJDLdiebA</td>
-                                            </tr>
-                                            <tr>
-                                                <td>order</td>
-                                                <td>No</td>
-                                                <td>Order of results</td>
-                                                <td>DESC</td>
-                                                <td>ASC</td>
-                                            </tr>
-                                            <tr>
-                                                <td>count</td>
-                                                <td>Optional</td>
-                                                <td>Total amount of results, maximum 1000.</td>
-                                                <td>50</td>
-                                                <td>1000</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <div className="mb15_">
-                                    <div className="title2">Example response</div>
-                                </div>
-                                <div className="code_">
-                                    <pre>
-                                        <code>
-                                            <div className="mb5_">
-                                                <span className="">{'{'}</span>
-                                            </div>
-                                            <div className="mb5_">
-                                                <span className="">    "status": <span className="code_string">"success"</span>,</span>
-                                            </div>
-                                            <div className="mb5_">
-                                                <span className="">    "message": <span className="code_string">"Hello!!!"</span>,</span>
-                                            </div>
-                                            <div className="mb5_">
-                                                <span className="">    "something": <span className="code_boolen">true</span>,</span>
-                                            </div>
-                                            <div className="mb5_">
-                                                <span className="">    "qwerty": <span className="code_boolen">null</span>,</span>
-                                            </div>
-                                            <div className="mb5_">
-                                                <span className="">    "number": <span className="code_string">123456789</span>,</span>
-                                            </div>
-                                            <div className="mb5_">
-                                                <span className="">{'}'}</span>
-                                            </div>
-                                        </code>
-                                    </pre>
-                                </div>
+                            <div className="col-xs-6 col-sm-12 icon-wrapper mb60_">
+                                <img src={icon4} alt=""/>
+                                <div className="mt30_ title3">Billy Maxwell</div>
+                            </div>
+                        </div>
+                        <div className="col-xs-12 col-sm-3">
+                            <div className="col-xs-6 col-sm-12 icon-wrapper mb60_">
+                                <img src={icon5} alt=""/>
+                                <div className="mt30_ title3">Joshua Harris</div>
+                            </div>
+                            <div className="col-xs-6 col-sm-12 icon-wrapper mb60_">
+                                <img src={icon6} alt=""/>
+                                <div className="mt30_ title3">Esther Ford</div>
                             </div>
                         </div>
                     </div>
@@ -140,13 +76,7 @@ class Main extends React.Component {
             </>  
         );
     }
-    
-    componentDidMount() {
 
-    }
-
-   
-    
 }
 
 export default Main;
